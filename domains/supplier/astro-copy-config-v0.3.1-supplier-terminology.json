@@ -1,0 +1,356 @@
+{
+  "schemaVersion": "1.0",
+  "config": {
+    "name": "Astro Copy System",
+    "version": "0.3.1-pilot-draft",
+    "sourceVersion": "0.3.0-pilot-draft",
+    "baseline": "BPI Supplier guideline review, 23 Oct 2026; partial visible decisions",
+    "status": "working baseline — not final policy",
+    "migrationNotes": "Canonical domain is supplier; code should normalize legacy vendor selection to supplier. Do not duplicate domain knowledge. The specific rejected guideline must be confirmed from the final annotated review sheet before release. Supplier domain terminology is now fixed by user decision: Supplier is mandatory for user-facing copy regardless of target audience; Vendor/Seller are detected as terminology issues."
+  },
+  "global": {
+    "principles": [
+      {
+        "id": "global-principle-01",
+        "rule": "Make it easy to understand."
+      },
+      {
+        "id": "global-principle-02",
+        "rule": "Make the next step clear."
+      },
+      {
+        "id": "global-principle-03",
+        "rule": "Keep the business meaning intact."
+      },
+      {
+        "id": "global-principle-04",
+        "rule": "Don't add unsupported information."
+      },
+      {
+        "id": "global-principle-05",
+        "rule": "Use the same term for the same thing."
+      },
+      {
+        "id": "global-principle-06",
+        "rule": "Write for the audience and situation."
+      },
+      {
+        "id": "global-principle-07",
+        "rule": "Keep it short without losing important context."
+      },
+      {
+        "id": "global-principle-08",
+        "rule": "Not every problem needs a copy fix."
+      }
+    ],
+    "formattingRules": [
+      {
+        "id": "global-format-date-time",
+        "name": "Date & Time",
+        "rule": "Astro uses WIB as the default timezone for user-facing timestamps. When showing a specific time, include \"WIB\" when timezone context is relevant. Do not infer or use another timezone unless project context explicitly says otherwise. Use the product's established Indonesian date/time format consistently."
+      }
+    ],
+    "componentPatterns": [
+      {
+        "id": "error",
+        "pattern": "Problem + Reason (if known) + Recovery",
+        "note": "Do not invent a reason. Recovery only when action is possible."
+      },
+      {
+        "id": "revision-rejection",
+        "pattern": "Affected object + Issue + Required action",
+        "note": "Use the actual object and validated issue; not generic 'upload again' if the reason is known."
+      },
+      {
+        "id": "requirement",
+        "pattern": "Condition (when relevant) + Requirement",
+        "note": "Condition must be true, and should not be repeated if already clear in UI/context. Never hardcode an unvalidated threshold."
+      },
+      {
+        "id": "request-reminder",
+        "pattern": "Reason or impact (if useful) + Action + Deadline/condition (if relevant)",
+        "note": "Mention impact when it helps explain importance or urgency, not every time. Do not invent impact."
+      },
+      {
+        "id": "warning-banner",
+        "pattern": "Situation + Impact + Action",
+        "note": "Include only details supported by project context."
+      },
+      {
+        "id": "confirmation",
+        "pattern": "Action + Consequence + Confirmation",
+        "note": "Do not remove important consequences to shorten the copy."
+      },
+      {
+        "id": "status",
+        "pattern": "Current state + Meaning / Next step (if needed)",
+        "note": "Do not imply action is required when not needed."
+      },
+      {
+        "id": "tooltip",
+        "pattern": "Meaning + Relevance (if needed)",
+        "note": "Keep concise; don't force a tooltip for familiar terms."
+      },
+      {
+        "id": "cta",
+        "pattern": "Verb + Object (when needed)",
+        "note": "Don't add an object when the surrounding UI already makes it clear."
+      }
+    ],
+    "decisionGuardrails": [
+      "Check who the user is, the component, the user goal, the actual business condition, and what is known versus missing.",
+      "Preserve the exact issue, document identity, comparison objects, consequences, and business rule; never substitute a plausible but unsupported interpretation.",
+      "When context is insufficient to confidently rewrite business-sensitive copy, Keep if acceptable or request clarification; do not fabricate specifics.",
+      "Do not automatically rewrite: first decide Keep, Rewrite, or UX Change based on the issue.",
+      "A pattern is a guide, not mandatory sentence structure.",
+      "Keep meaningful, familiar industry terms; do not blindly translate or expand acronyms.",
+      "Don't automatically turn paragraphs into checklists when current content is already easy to scan.",
+      "Do not display raw markup tags (e.g. <strong>) as copy. Markup sanitization belongs in plugin code."
+    ]
+  },
+  "domains": {
+    "supplier": {
+      "label": "Supplier",
+      "audience": "External Supplier-facing product experiences; not automatically internal Admin flows.",
+      "status": "working baseline pending broader Supplier pilot",
+      "reviewPolicy": {
+        "activeWhen": "enabledForPilot = true AND reviewStatus = approved",
+        "hold": "Do not treat hold, rejected or pending_confirmation guidelines as binding instructions.",
+        "evidence": "Invoice and MOQ/MOV samples show why a rule was proposed, not a fixed wording template or proof it applies everywhere.",
+        "context": "Validate project/user context and business rules before suggesting concrete copy.",
+        "mandatoryTerminology": {
+          "canonicalTerm": "Supplier",
+          "detectAliases": [
+            "Vendor",
+            "Seller"
+          ],
+          "appliesTo": "Any user-facing copy when domain=supplier, regardless of target user (including internal users).",
+          "action": "Flag Vendor or Seller as a terminology issue and suggest Supplier. Never mark copy Keep/Sudah sesuai guideline when this issue remains. Retain original Current Copy until the user explicitly applies a suggestion.",
+          "scopeNote": "Do not rename code identifiers, backend schema fields, proper external names, or underlying Figma layers; this rule is for reviewed/generated user-visible copy."
+        }
+      },
+      "guidelines": [
+        {
+          "id": "supplier-guideline-01",
+          "name": "Say what needs to be fixed.",
+          "rule": "For revision, rejection, or errors, identify the actual problem and required recovery action when the information is available.",
+          "applicabilityAndExceptions": "If the error reason is not known, don't invent one; signal missing context. Keep the affected document/field precise.",
+          "reviewStatus": "pending_confirmation",
+          "enabledForPilot": false,
+          "evidenceNote": "Invoice sample 'Upload ulang invoice.' lacked a visible revision reason; final approval not verified."
+        },
+        {
+          "id": "supplier-guideline-02",
+          "name": "Use language Suppliers understand.",
+          "rule": "Write external Supplier-facing messages using language and the actual document names Suppliers can recognize. Translate internal BPI, Commercial, Finance, or system notes into an understandable user message.",
+          "applicabilityAndExceptions": "Keep official or familiar industry terms when appropriate. Spell out ambiguous abbreviations when needed, not automatically. Follow the actual attached document's confirmed name.",
+          "reviewStatus": "pending_confirmation",
+          "enabledForPilot": false,
+          "evidenceNote": "Review requested using attached document names, and avoiding unexplained internal terms/short forms."
+        },
+        {
+          "id": "supplier-guideline-03",
+          "name": "Use one term consistently.",
+          "rule": "Use a consistent name for the same business concept. In the Supplier domain, always use Supplier (not Vendor or Seller) in user-facing copy regardless of target audience.",
+          "applicabilityAndExceptions": "First verify two terms refer to the same object. Do not merge Surat Konfirmasi Harga with Surat Pernyataan simply because a sample proposed a replacement. This Supplier/Vendor/Seller terminology decision is mandatory for all Supplier-domain user-facing copy, including internal-facing flows. Flag aliases and suggest Supplier; do not silently overwrite source text or modify internal code identifiers.",
+          "reviewStatus": "approved",
+          "enabledForPilot": true,
+          "evidenceNote": "BPI clarified this sample was a misunderstanding of the document, not necessarily inconsistency. Replace it as supporting evidence in the next source review. User confirmed Supplier is mandatory in this domain across target audiences."
+        },
+        {
+          "id": "supplier-guideline-04",
+          "name": "Make it clear when a requirement applies.",
+          "rule": "When a requirement is conditional, make its applicability clear to the relevant user.",
+          "applicabilityAndExceptions": "Do not force the condition to the beginning of the sentence or repeat a context already clear from UI. Validate threshold boundaries (> / >= / =) and avoid narrowing generic 'bermaterai' to e-Meterai without Finance confirmation.",
+          "reviewStatus": "approved",
+          "enabledForPilot": true,
+          "evidenceNote": "Invoice threshold example already states the condition; demonstrates the importance of an accurate requirement, not a faulty sentence order."
+        },
+        {
+          "id": "supplier-guideline-05",
+          "name": "Explain what will happen before an important action.",
+          "rule": "Before destructive, replacing, repeating or hard-to-undo actions, communicate meaningful consequences supported by the actual system behavior.",
+          "applicabilityAndExceptions": "Don't claim that OCR data will be deleted, documents replaced, or anything preserved unless that matches the current product behavior.",
+          "reviewStatus": "pending_confirmation",
+          "enabledForPilot": false,
+          "evidenceNote": "Sample replacement wording removed the existing OCR deletion warning; final review status not available."
+        },
+        {
+          "id": "supplier-guideline-06",
+          "name": "Be clear about what is being compared.",
+          "rule": "When a mismatch must be explained, accurately identify both known reference objects and what differs.",
+          "applicabilityAndExceptions": "HOLD: A PO mismatch could involve a wrongly selected PO or a mismatched uploaded file. Only use once the specific comparison scenario is verified; otherwise ask for context.",
+          "reviewStatus": "hold",
+          "enabledForPilot": false,
+          "evidenceNote": "BPI noted multiple valid PO mismatch scenarios; status Hold in screenshot."
+        },
+        {
+          "id": "supplier-guideline-07",
+          "name": "Use familiar terms when possible.",
+          "rule": "Use terms familiar to Suppliers in their workflow, including established industry terminology, and clarify only when needed.",
+          "applicabilityAndExceptions": "Don't automatically translate accepted English terms, force longer labels, or expand abbreviations without checking context.",
+          "reviewStatus": "approved",
+          "enabledForPilot": true,
+          "evidenceNote": "BPI confirmed 'asing' terms may be industry-standard; glossary should reflect actual usage."
+        },
+        {
+          "id": "supplier-guideline-08",
+          "name": "Make complex requirements easy to scan.",
+          "rule": "When multiple rules or requirements are difficult to read, improve scanability with structure appropriate to the component.",
+          "applicabilityAndExceptions": "Keep the current structure if it is already clear. A checklist is only one option; keep correct terms and rules intact.",
+          "reviewStatus": "approved",
+          "enabledForPilot": true,
+          "evidenceNote": "BPI said existing structures may be kept while only improving relevant wording and terminology."
+        },
+        {
+          "id": "supplier-guideline-09",
+          "name": "Keep related message and action together.",
+          "rule": "When an instruction and its related action are separated, surface the placement problem and propose UX treatment instead of only rewriting words.",
+          "applicabilityAndExceptions": "This may belong to UX/content placement rather than a copy rule. Its final decision (including which single guideline was rejected) must be verified before enabling.",
+          "reviewStatus": "pending_confirmation",
+          "enabledForPilot": false,
+          "evidenceNote": "One guideline was rejected as irrelevant, but the rejected row is not identified in the available record. Do not assume this was it."
+        }
+      ],
+      "glossary": [
+        {
+          "term": "Supplier",
+          "aliases": [
+            "Vendor",
+            "Seller"
+          ],
+          "meaning": "External party supplying goods or services to Astro.",
+          "preferredUsage": "Mandatory primary term for all user-facing copy in the Supplier domain, regardless of audience. If Vendor or Seller appears, suggest replacing it with Supplier.",
+          "avoid": "Using Vendor or Seller in Supplier-domain UI copy, including internal Admin/CatMan screens. Do not silently alter original copy.",
+          "status": "validated",
+          "reviewStatus": "approved"
+        },
+        {
+          "term": "PO",
+          "aliases": [
+            "Purchase Order"
+          ],
+          "meaning": "Purchase order issued by buyer to Supplier.",
+          "preferredUsage": "Use PO when familiar in this workflow; explain the full form when needed.",
+          "avoid": "Replacing every PO with a longer term by default.",
+          "status": "validated",
+          "reviewStatus": "baseline_not_confirmed"
+        },
+        {
+          "term": "Invoice",
+          "aliases": [
+            "Faktur",
+            "Tagihan"
+          ],
+          "meaning": "Payment document submitted by Supplier.",
+          "preferredUsage": "Use Invoice consistently for this business object when it matches the flow.",
+          "avoid": "Treating Invoice, Faktur Pajak, and other documents as interchangeable.",
+          "status": "validated",
+          "reviewStatus": "baseline_not_confirmed"
+        },
+        {
+          "term": "Faktur Pajak",
+          "aliases": [
+            "Tax Invoice"
+          ],
+          "meaning": "Document for tax reporting.",
+          "preferredUsage": "Keep Faktur Pajak where this official term is used.",
+          "avoid": "Changing document issues (incomplete versus unreadable).",
+          "status": "validated",
+          "reviewStatus": "baseline_not_confirmed"
+        },
+        {
+          "term": "Surat Jalan",
+          "aliases": [
+            "Delivery Note",
+            "DO"
+          ],
+          "meaning": "Document confirming shipping/delivery.",
+          "preferredUsage": "Use Surat Jalan for the corresponding document.",
+          "avoid": "Unnecessary translations of established documents.",
+          "status": "validated",
+          "reviewStatus": "baseline_not_confirmed"
+        },
+        {
+          "term": "GRN",
+          "aliases": [
+            "Goods Receipt Note"
+          ],
+          "meaning": "Goods receipt confirmation.",
+          "preferredUsage": "Validate whether this audience understands GRN; expand when useful.",
+          "avoid": "Assuming all Supplier users know it.",
+          "status": "draft",
+          "reviewStatus": "needs_decision"
+        },
+        {
+          "term": "Surat Pernyataan",
+          "aliases": [
+            "Statement Letter"
+          ],
+          "meaning": "May refer to a supporting statement related to PO/Invoice differences; confirm exact document identity.",
+          "preferredUsage": "Use only for the document that is actually required; verify with BPI and document owners.",
+          "avoid": "Automatically replacing Surat Konfirmasi Harga with Surat Pernyataan.",
+          "status": "draft",
+          "reviewStatus": "needs_decision"
+        },
+        {
+          "term": "Surat Konfirmasi",
+          "aliases": [
+            "Confirmation Letter",
+            "Surat Konfirmasi Harga"
+          ],
+          "meaning": "A confirmation document; exact purpose and relationship to Surat Pernyataan must be validated.",
+          "preferredUsage": "Use the actual attached/required document name after confirming identity.",
+          "avoid": "Assuming different document names refer to the same file.",
+          "status": "needs decision",
+          "reviewStatus": "needs_decision"
+        },
+        {
+          "term": "Meterai",
+          "aliases": [
+            "bermaterai"
+          ],
+          "meaning": "Stamp duty requirement; permitted form and eligibility need Finance/business verification.",
+          "preferredUsage": "Use neutral 'bermaterai' where a valid requirement exists; don't assume paper versus electronic form.",
+          "avoid": "Hardcoding an unverified threshold or meterai type.",
+          "status": "draft",
+          "reviewStatus": "needs_decision"
+        },
+        {
+          "term": "e-Meterai",
+          "aliases": [
+            "Materai Digital",
+            "Electronic Stamp"
+          ],
+          "meaning": "Electronic form of meterai.",
+          "preferredUsage": "Use only if this exact electronic form is confirmed as required or specifically relevant.",
+          "avoid": "Treating e-Meterai as mandatory for all invoices above an assumed threshold.",
+          "status": "draft",
+          "reviewStatus": "needs_decision"
+        },
+        {
+          "term": "Multiplier",
+          "aliases": [
+            "Kelipatan"
+          ],
+          "meaning": "Possible order quantity multiple/step; exact business terminology depends on workflow.",
+          "preferredUsage": "Can remain when it is an accepted industry term for the relevant Supplier audience.",
+          "avoid": "Unverified automatic translation or needlessly repetitive phrasing.",
+          "status": "draft",
+          "reviewStatus": "needs_decision"
+        },
+        {
+          "term": "Kelipatan",
+          "aliases": [
+            "Multiplier"
+          ],
+          "meaning": "Indonesian expression for quantity in multiples of a defined unit.",
+          "preferredUsage": "Use only when it accurately reflects the concept and user familiarity.",
+          "avoid": "Assuming Kelipatan is always better than an existing industry term.",
+          "status": "draft",
+          "reviewStatus": "needs_decision"
+        }
+      ]
+    }
+  }
+}
