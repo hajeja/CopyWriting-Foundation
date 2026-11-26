@@ -1,33 +1,34 @@
-# Buyer Copy Guidelines — v0.1 Draft
+# Buyer Copy Guidelines
 
-**Status:** Extracted draft for review. **Not approved, not enabled in tools.**
+**Current trial config:** [v0.1.1 — Approved for Pilot](./buyer-guidelines-v0.1.1-pilot-approved.json) · **10 enabled guidelines**.
 
-[Buyer Guidelines JSON](./buyer-guidelines-v0.1-draft.json)
+**Original source snapshot:** [v0.1.0 — Extracted Draft](./buyer-guidelines-v0.1-draft.json) (preserved unchanged).
 
-## Source
+## Approval scope and source
 
-Extracted from the user-provided **UX Writing Playbook (1).zip**, notably:
-- `2.3. Our Voice.pdf`, Friendly / Thoughtful / Reliable, `2.4. Our Tone.pdf`, `2.5. Our Tone_ User Journey Map.pdf`, `2.6. Writing with Voice & Tone.pdf`
+On **26 November 2026**, the project owner requested Buyer guidelines be marked `approved` and `enabledForPilot` **for internal hands-on testing**. This is **not** a claim of formal BPI, Brand, or organizational policy approval.
+
+Guidelines come from the uploaded **UX Writing Playbook (1).zip**. Relevant files include:
+- `2.3. Our Voice.pdf` and Friendly / Thoughtful / Reliable voice docs
+- `2.4. Our Tone.pdf`, `2.5. Our Tone_ User Journey Map.pdf`, `2.6. Writing with Voice & Tone.pdf`
 - `4.1–4.5` Writing Principles
-- `5.1` Abbreviations, `5.2` Acronyms, `5.3` Capitalization, Brand Name / Currency / Date / Time formats, Numbers and Text Styling
+- `5.1` Abbreviations, `5.2` Acronyms, `5.3` Capitalization; brand/currency/date/time formats and numbers
 
-The original ZIP is **not included in this repository**. The source file references in JSON point to filenames in that upload.
+Source ZIP is not committed to the repository. The JSON includes source filename references.
 
-## What is here
+## Pilot guidelines
 
-10 draft Buyer guidelines covering voice, tone by journey, empathy/benefits, scanability, direct language, abbreviations, capitalization, brand name, formatting and emphasis.
+Ten rules cover Buyer voice, tone by journey, user benefit, scanability, concise language, acronyms, capitalization, brand naming, date/time/currency and emphasis.
 
-The historical playbook makes **Buyer tone more casual, fun, enthusiastic and simple**, compared with operational product guidance. For errors, payment, and sensitive moments, it shifts toward reassurance.
+Historical playbook tone for Buyer is more casual, fun, enthusiastic and simple. Error/payment and sensitive moments should favor respect and reassurance.
 
-**Buyer-only formatting note:** the Playbook recommends sentence case for headings/body and Title Case for buttons. Check this against current Buyer components before enforcing. Do not automatically carry this rule to Supplier or Mitra.
+**Known validation:** Playbook calls for Title Case on buttons and sentence case on headings/body. Confirm this still matches current Buyer DS before treating it as permanent policy.
 
-## AI & implementation rules
+## Integration
 
-- Use the shared Global Copy Foundation, not Supplier-specific guideline rules.
-- Do **not** activate any item before current product/brand review: all rules have `reviewStatus: draft`, `enabledForPilot: false`.
-- Do not invent discounts, stock status, delivery claims, urgency, benefit amounts, or payment consequences.
-- This draft is for review, **not auto-synced** to the existing Figma Plugin or Chrome Extension.
+- Apply shared global principles and **Buyer-specific** rules only; never import Supplier-specific glossary or naming mandates.
+- Domain rules in the `v0.1.1` file have `reviewStatus: approved`, `enabledForPilot: true`, and `approvalScope: pilot_only`.
+- This GitHub update does not auto-update the Chrome Extension or Figma Plugin: the runtime must explicitly load the correct version.
+- Do not invent commercial or payment terms, discount eligibility, delivery promises or product claims. Flag missing material context.
 
-## Next review
-
-Confirm current Buyer voice/tone, capitalization, current audiences, exceptions, approval owner, and business claims before promoting individual rules to `approved`.
+Future work: Validate against active Buyer UX, update outdated style rules, and seek proper policy signoff where needed.
