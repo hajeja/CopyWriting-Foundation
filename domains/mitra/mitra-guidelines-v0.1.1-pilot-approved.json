@@ -1,0 +1,160 @@
+{
+  "schemaVersion": "1.0",
+  "config": {
+    "name": "Astro Mitra Copy Guidelines",
+    "version": "0.1.1-pilot-approved",
+    "status": "approved_for_pilot_by_project_owner_not_formally_signed_off",
+    "source": "Earlier Mitra / Fulfillment field-user discussions and copywriting scope (Aug-Nov 2026), not a finalized Mitra guideline document",
+    "note": "This is a pilot-enabled copy of the original draft. Source provenance and unresolved validation remain in the domain metadata. Approval does not verify operational/business facts. Preserve original draft unchanged.",
+    "sourceVersion": "0.1.0-research-draft",
+    "approvalScope": "Internal trial only; user-authorized 2026-11-26. Does not constitute BPI, Brand, Ops, Legal, or organizational policy signoff."
+  },
+  "sharedGlobalFoundation": {
+    "reference": "../supplier/astro-copy-config-v0.3.1-supplier-terminology.json#global",
+    "note": "Use existing global copy principles as reference; do not carry over the Supplier-specific glossary, Supplier/Vendor naming mandate, or rules to Mitra."
+  },
+  "domains": {
+    "mitra": {
+      "label": "Mitra",
+      "audience": "Operational/field users in relevant Fulfillment experiences; confirm exact roles, workflows and terminology for each feature.",
+      "scope": "Task-based UI copy, SOP, Work Instructions, OJT/training and operational announcements. Broader Mitra channels require validation before rollout.",
+      "status": "approved_for_pilot_validation_pending",
+      "reviewPolicy": {
+        "activeWhen": "enabledForPilot = true AND reviewStatus = approved",
+        "drafts": "Historical v0.1.0 draft remains archived; this v0.1.1 file enables test usage, with content subject to review.",
+        "nonFabrication": "Never invent operational steps, scan requirements, exceptions, SLA, escalation policies, permissions or ownership.",
+        "userContext": "Check the real user role, current task, object and next action; don't assume every Mitra workflow matches Fulfillment or WMS.",
+        "pilotApproval": "All domain guidelines activated for user-led internal trial on 2026-11-26. Formal policy signoff is not established.",
+        "scopeNotes": "Guidelines are stylistic/research-derived pilot heuristics; do not treat them as evidence of business behavior."
+      },
+      "toneReference": {
+        "source": "Earlier Fulfillment field feedback + UX Writing Playbook (1).zip / 2.4. Our Tone.pdf",
+        "proposedDirection": "Simple, straightforward and task-focused; more serious than Buyer in operational or error contexts.",
+        "provenance": "Provisional adaptation of Fulfillment product tone, not a signed-off Mitra-specific voice policy.",
+        "reviewStatus": "needs_validation"
+      },
+      "guidelines": [
+        {
+          "id": "mitra-guideline-01",
+          "name": "Make the task and next action explicit.",
+          "rule": "Tell users what to do, on which object, and what outcome to expect when those details are confirmed. Avoid vague generic instructions.",
+          "evidence": "Prior Fulfillment/Mitra field findings emphasized direct task-focused copy.",
+          "reviewStatus": "approved",
+          "enabledForPilot": true,
+          "approvalScope": "pilot_only",
+          "approvalSource": "User requested internal testing on 2026-11-26"
+        },
+        {
+          "id": "mitra-guideline-02",
+          "name": "Match instructions to the current workflow step.",
+          "rule": "Communicate the relevant condition or state before the action only when necessary. Don't assume an operational state not confirmed by the actual flow.",
+          "evidence": "Operational task context changes the meaning of instructions.",
+          "reviewStatus": "approved",
+          "enabledForPilot": true,
+          "approvalScope": "pilot_only",
+          "approvalSource": "User requested internal testing on 2026-11-26"
+        },
+        {
+          "id": "mitra-guideline-03",
+          "name": "Make errors actionable.",
+          "rule": "State the actual problem and recovery action when known. If cause or recovery is unknown, ask for more context instead of inventing a fix.",
+          "evidence": "Field users need error reasons and recovery to continue work.",
+          "reviewStatus": "approved",
+          "enabledForPilot": true,
+          "approvalScope": "pilot_only",
+          "approvalSource": "User requested internal testing on 2026-11-26"
+        },
+        {
+          "id": "mitra-guideline-04",
+          "name": "Use familiar field terminology.",
+          "rule": "Prefer terms the relevant operational users understand; avoid unexplained internal English/system jargon. Keep official or widely used terms when they are genuinely understood.",
+          "evidence": "Unfamiliar English and internal vocabulary created confusion in prior user conversations.",
+          "reviewStatus": "approved",
+          "enabledForPilot": true,
+          "approvalScope": "pilot_only",
+          "approvalSource": "User requested internal testing on 2026-11-26"
+        },
+        {
+          "id": "mitra-guideline-05",
+          "name": "Make SOP, WI and OJT instructions easy to follow.",
+          "rule": "Organize work instructions into clear, ordered actions and meaningful checkpoints where the actual procedure supports them. Avoid adding steps, thresholds or exceptions that are not verified.",
+          "evidence": "User requested a cross-channel guideline for SOP, Working Instructions, announcements and training.",
+          "reviewStatus": "approved",
+          "enabledForPilot": true,
+          "approvalScope": "pilot_only",
+          "approvalSource": "User requested internal testing on 2026-11-26"
+        },
+        {
+          "id": "mitra-guideline-06",
+          "name": "Explain operational statuses when needed.",
+          "rule": "Use status copy that conveys the actual work state and what happens next or who acts next, when confirmed and relevant. Don't imply completion or next actions without evidence.",
+          "evidence": "Task-state interpretation and next steps matter in operations.",
+          "reviewStatus": "approved",
+          "enabledForPilot": true,
+          "approvalScope": "pilot_only",
+          "approvalSource": "User requested internal testing on 2026-11-26"
+        },
+        {
+          "id": "mitra-guideline-07",
+          "name": "Keep instructions concise and scannable.",
+          "rule": "Use short, direct sentences and grouping that are usable during active work. Avoid burying the action in long explanatory copy.",
+          "evidence": "Field feedback emphasized speed, clarity and reduced cognitive load.",
+          "reviewStatus": "approved",
+          "enabledForPilot": true,
+          "approvalScope": "pilot_only",
+          "approvalSource": "User requested internal testing on 2026-11-26"
+        },
+        {
+          "id": "mitra-guideline-08",
+          "name": "Reduce avoidable dependence on SPV clarification.",
+          "rule": "State enough context so users can act without unnecessary follow-up, but preserve any real escalation requirement. Do not invent or remove escalation rules.",
+          "evidence": "Confusing copy was discussed as a cause of extra SPV questions and delays.",
+          "reviewStatus": "approved",
+          "enabledForPilot": true,
+          "approvalScope": "pilot_only",
+          "approvalSource": "User requested internal testing on 2026-11-26"
+        },
+        {
+          "id": "mitra-guideline-09",
+          "name": "Treat workflow or placement problems as UX issues.",
+          "rule": "If the missing information or action placement cannot be fixed by copy alone, flag the UX/workflow problem instead of making up text.",
+          "evidence": "Shared Global Foundation plus operational field context; proposed domain application.",
+          "reviewStatus": "approved",
+          "enabledForPilot": true,
+          "approvalScope": "pilot_only",
+          "approvalSource": "User requested internal testing on 2026-11-26"
+        }
+      ],
+      "glossary": [],
+      "glossaryCandidates": [
+        {
+          "term": "Mitra",
+          "note": "Confirm scope and whether this is the actual user-facing role label in each product."
+        },
+        {
+          "term": "SPV",
+          "note": "Check whether this abbreviation is understood and whether escalation is actually part of the workflow."
+        },
+        {
+          "term": "SOP",
+          "note": "Verify official procedure terminology and which audiences read it."
+        },
+        {
+          "term": "WI",
+          "note": "Working Instruction; verify user familiarity and preferred labeling."
+        },
+        {
+          "term": "OJT",
+          "note": "On-the-job training; verify user familiarity and preferred labeling."
+        }
+      ],
+      "openQuestions": [
+        "Confirm which experiences/roles are covered by 'Mitra' instead of treating all Fulfillment/WMS users as one audience.",
+        "Validate examples and wording with actual SOP, WI, OJT and current UI before approving rules.",
+        "Confirm role-specific glossary terms, error recovery, scan behavior, status meanings and escalation paths.",
+        "Identify a business/design approver for Mitra domain guidelines.",
+        "Determine which rules apply to training and announcements beyond in-product UX copy."
+      ]
+    }
+  }
+}
