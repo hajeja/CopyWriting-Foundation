@@ -1,11 +1,11 @@
 {
   "schemaVersion": "1.0",
   "config": {
-    "name": "Astro Buyer Copy Guidelines",
-    "version": "0.1.0-extracted-draft",
-    "status": "draft_for_review_not_approved",
-    "source": "UX Writing Playbook (1).zip, files listed in domains.buyer.sourceDocuments",
-    "note": "Domain supplement, not an independently approved company policy. Not active in existing Figma/Chrome tools. Apply shared Global Principles separately."
+    "name": "Astro Buyer Writing Rules",
+    "version": "0.2.0-playbook-draft",
+    "status": "draft_for_review",
+    "source": "User-uploaded UX Writing Playbook (1)(1).zip (52 PDFs), 2026-11-26",
+    "note": "Replaces all earlier Buyer rules. Source content is historical, not formal current product/brand signoff."
   },
   "sharedGlobalFoundation": {
     "reference": "../supplier/astro-copy-config-v0.3.1-supplier-terminology.json#global",
@@ -15,12 +15,15 @@
     "buyer": {
       "label": "Buyer",
       "audience": "Buyers using Astro consumer products. Check actual product, journey stage, and audience before applying copy rules.",
-      "status": "extracted_draft_needs_product_review",
+      "status": "draft_from_uploaded_playbook",
       "reviewPolicy": {
-        "activeWhen": "reviewStatus = approved AND enabledForPilot = true",
-        "drafts": "All Buyer rules are extracted from the uploaded UX Writing Playbook and are OFF until reviewed for current use.",
-        "nonFabrication": "Do not invent benefits, promo terms, delivery promises, urgency, eligibility, stock claims, or payment consequences.",
-        "scope": "Buyer product UX. Do not automatically apply Buyer capitalization, voice, or marketing tone to Supplier, Mitra, or Admin."
+        "activeWhen": "enabledForPilot = true AND reviewStatus = approved",
+        "drafts": "Historical v0.1.0 draft remains archived; this v0.1.1 file enables test usage, with content subject to review.",
+        "nonFabrication": "Never invent delivery speed, shipping fees, discounts, promos, stock, payment outcomes, urgency or business capabilities.",
+        "scope": "Buyer product UX. Do not automatically apply Buyer capitalization, voice, or marketing tone to Supplier, Mitra, or Admin.",
+        "pilotApproval": "All domain guidelines activated for user-led internal trial on 2026-11-26. Formal policy signoff is not established.",
+        "scopeNotes": "Guidelines are stylistic/research-derived pilot heuristics; do not treat them as evidence of business behavior.",
+        "legacyWarning": "Source is historical playbook; validate current brand, UI, formatting and platform limits. Treat historic delivery, price and personas as background only, never active promises."
       },
       "toneReference": {
         "source": "2.4. Our Tone.pdf; 2.5. Our Tone_ User Journey Map.pdf; 2.6. Writing with Voice & Tone.pdf",
@@ -31,117 +34,283 @@
       },
       "guidelines": [
         {
-          "id": "buyer-guideline-01",
-          "name": "Use a friendly, thoughtful and reliable voice.",
-          "rule": "Use natural, relatable language while staying helpful, considerate, and clear. Avoid jokes or overly casual expressions in sensitive or confusing moments.",
+          "id": "buyer-playbook-01",
+          "name": "Voice",
+          "rule": "Friendly, thoughtful and reliable: cheerful, conversational, supportive, humble, universally understandable, direct and knowledgeable. Prefer active voice; jokes and contractions only when context-appropriate.",
           "sourceDocuments": [
             "2.3. Our Voice.pdf",
             "2.3.1. Friendly.pdf",
             "2.3.2. Thoughtful.pdf",
-            "2.3.3. Reliable.pdf",
-            "2.6. Writing with Voice & Tone.pdf"
+            "2.3.3. Reliable.pdf"
           ],
           "reviewStatus": "draft",
-          "enabledForPilot": false
+          "enabledForPilot": false,
+          "approvalScope": "pending_review"
         },
         {
-          "id": "buyer-guideline-02",
-          "name": "Match tone to the user's journey.",
-          "rule": "Use an engaging tone where appropriate, while prioritizing respect and reassurance during payment-related uncertainty and errors.",
+          "id": "buyer-playbook-02",
+          "name": "Buyer tone",
+          "rule": "Casual, fun, enthusiastic and simple for Buyer; more excitement for first impressions/onboarding/promos/payment success, and more respectful reassurance for payment and errors.",
           "sourceDocuments": [
             "2.4. Our Tone.pdf",
             "2.5. Our Tone_ User Journey Map.pdf"
           ],
           "reviewStatus": "draft",
-          "enabledForPilot": false
+          "enabledForPilot": false,
+          "approvalScope": "pending_review"
         },
         {
-          "id": "buyer-guideline-03",
-          "name": "Lead with what matters to the buyer.",
-          "rule": "Prioritize what users need to understand and the benefit relevant to them, rather than internal company objectives. Do not invent benefits.",
+          "id": "buyer-playbook-03",
+          "name": "Voice and tone execution",
+          "rule": "Friendly uses relatable language, thoughtful is comforting and respectful, reliable is positive and clear. Prefer simple phrases, active sentences, modest punctuation; do not overuse emoji or exclamation marks.",
           "sourceDocuments": [
-            "4.1. Context is king.pdf",
-            "4.4. Empathy first.pdf"
+            "2.6. Writing with Voice & Tone.pdf"
           ],
           "reviewStatus": "draft",
-          "enabledForPilot": false
+          "enabledForPilot": false,
+          "approvalScope": "pending_review"
         },
         {
-          "id": "buyer-guideline-04",
-          "name": "Make content easy to scan.",
-          "rule": "Use descriptive headings, logical information grouping, and short paragraphs; use bullet points only when they help.",
+          "id": "buyer-playbook-04",
+          "name": "Context",
+          "rule": "Before writing: know why, who reads it, intended message, matching writing angle and CTA.",
+          "sourceDocuments": [
+            "4.1. Context is king.pdf"
+          ],
+          "reviewStatus": "draft",
+          "enabledForPilot": false,
+          "approvalScope": "pending_review"
+        },
+        {
+          "id": "buyer-playbook-05",
+          "name": "Plain language",
+          "rule": "Write conversationally at roughly eighth-grade reading level; short natural sentences (playbook suggests approximately 14–20 words), contractions as appropriate.",
+          "sourceDocuments": [
+            "4.2. Write like a human.pdf"
+          ],
+          "reviewStatus": "draft",
+          "enabledForPilot": false,
+          "approvalScope": "pending_review"
+        },
+        {
+          "id": "buyer-playbook-06",
+          "name": "Hierarchy",
+          "rule": "Use clear descriptive headings, logical grouping, short paragraphs and helpful bullets.",
           "sourceDocuments": [
             "4.3. Mind the hierarchy.pdf"
           ],
           "reviewStatus": "draft",
-          "enabledForPilot": false
+          "enabledForPilot": false,
+          "approvalScope": "pending_review"
         },
         {
-          "id": "buyer-guideline-05",
-          "name": "Keep copy plain and concise.",
-          "rule": "Use familiar words, active voice, and short natural sentences. Remove unnecessary words without losing material information.",
+          "id": "buyer-playbook-07",
+          "name": "Empathy",
+          "rule": "Lead with benefits to users, anticipate questions and use 'you' or 'kamu' where suitable.",
           "sourceDocuments": [
-            "4.2. Write like a human.pdf",
-            "4.5. Pay attention to detail.pdf",
-            "2.3.3. Reliable.pdf"
+            "4.4. Empathy first.pdf"
           ],
           "reviewStatus": "draft",
-          "enabledForPilot": false
+          "enabledForPilot": false,
+          "approvalScope": "pending_review"
         },
         {
-          "id": "buyer-guideline-06",
-          "name": "Use familiar acronyms carefully.",
-          "rule": "Avoid unexplained industry jargon; spell out unfamiliar acronyms on first use when helpful. Keep widely recognized acronyms or official entity names as needed.",
+          "id": "buyer-playbook-08",
+          "name": "Editing",
+          "rule": "Read aloud, trim unnecessary words, apply style consistently.",
           "sourceDocuments": [
-            "5.1. Abbreviations.pdf",
+            "4.5. Pay attention to detail.pdf"
+          ],
+          "reviewStatus": "draft",
+          "enabledForPilot": false,
+          "approvalScope": "pending_review"
+        },
+        {
+          "id": "buyer-playbook-09",
+          "name": "Abbreviations",
+          "rule": "Prefer full words in body copy where space allows; abbreviations can suit charts/captions. Abbreviated words in body copy take a period, e.g. 'Min.'.",
+          "sourceDocuments": [
+            "5.1. Abbreviations.pdf"
+          ],
+          "reviewStatus": "draft",
+          "enabledForPilot": false,
+          "approvalScope": "pending_review"
+        },
+        {
+          "id": "buyer-playbook-10",
+          "name": "Acronyms",
+          "rule": "Use familiar acronyms and official entity spellings; explain unfamiliar acronyms on first use and avoid unexplained jargon.",
+          "sourceDocuments": [
             "5.2. Acronyms.pdf"
           ],
           "reviewStatus": "draft",
-          "enabledForPilot": false
+          "enabledForPilot": false,
+          "approvalScope": "pending_review"
         },
         {
-          "id": "buyer-guideline-07",
-          "name": "Apply Buyer capitalization appropriately.",
-          "rule": "Playbook guidance: sentence case for headings/body and title case for buttons and section labels; preserve proper names. Validate against current Buyer Design System before enforcing.",
+          "id": "buyer-playbook-11",
+          "name": "Capitalization",
+          "rule": "Sentence case for headings and body; Title Case for buttons and section labels in this historical playbook; preserve proper names. Ordinary internet, web, website, email, download, upload, login and logout are lowercase.",
           "sourceDocuments": [
             "5.3. Capitalization.pdf"
           ],
           "reviewStatus": "draft",
-          "enabledForPilot": false
+          "enabledForPilot": false,
+          "approvalScope": "pending_review"
         },
         {
-          "id": "buyer-guideline-08",
-          "name": "Keep brand naming consistent.",
-          "rule": "Use 'Astro' in product UX writing; the stylized ASTRO logo is a separate brand asset.",
+          "id": "buyer-playbook-12",
+          "name": "Brand name",
+          "rule": "In product UX copy write 'Astro', not ASTRO (logo styling), astro or aStRo.",
           "sourceDocuments": [
             "5.4.1. General Formats/Brand Name.pdf"
           ],
           "reviewStatus": "draft",
-          "enabledForPilot": false
+          "enabledForPilot": false,
+          "approvalScope": "pending_review"
         },
         {
-          "id": "buyer-guideline-09",
-          "name": "Use consistent number, currency, date and time formats.",
-          "rule": "Playbook examples include numerals, %, 'Rp50.000', 24-hour times with WIB when relevant, date names in Indonesian/English context, and no-space en dashes for ranges. Do not change actual values.",
+          "id": "buyer-playbook-13",
+          "name": "Currency",
+          "rule": "Write Rp50.000 without space or dot; don't abbreviate unless needed. For ranges use Rp on both values and unspaced en dash: Rp50.000–Rp100.000.",
           "sourceDocuments": [
-            "5.5. Numbers.pdf",
-            "5.4.2. General Formats/Currency.pdf",
-            "5.4.3. General Formats/Date.pdf",
+            "5.4.2. General Formats/Currency.pdf"
+          ],
+          "reviewStatus": "draft",
+          "enabledForPilot": false,
+          "approvalScope": "pending_review"
+        },
+        {
+          "id": "buyer-playbook-14",
+          "name": "Date",
+          "rule": "Use cardinal dates, three-letter short names without periods, full words in body when useful, unspaced en dash for ranges (Feb 2022–Mar 2022); no ordinal suffixes.",
+          "sourceDocuments": [
+            "5.4.3. General Formats/Date.pdf"
+          ],
+          "reviewStatus": "draft",
+          "enabledForPilot": false,
+          "approvalScope": "pending_review"
+        },
+        {
+          "id": "buyer-playbook-15",
+          "name": "Time",
+          "rule": "Use HH:MM or HH:MM:SS with timezone, e.g. 06:59 WIB; time ranges with unspaced en dash and WIB once at end.",
+          "sourceDocuments": [
             "5.4.4. General Formats/Time.pdf"
           ],
           "reviewStatus": "draft",
-          "enabledForPilot": false
+          "enabledForPilot": false,
+          "approvalScope": "pending_review"
         },
         {
-          "id": "buyer-guideline-10",
-          "name": "Use emphasis and punctuation purposefully.",
-          "rule": "Avoid overly emphatic punctuation, excessive emoji, all caps, and gratuitous bold. Emphasize the most helpful information.",
+          "id": "buyer-playbook-16",
+          "name": "Phone numbers",
+          "rule": "Format local as 0851-1234-5678 or international as (+62) 851-1234-5678.",
           "sourceDocuments": [
-            "2.6. Writing with Voice & Tone.pdf",
+            "5.4.5. General Formats/Phone Number.pdf"
+          ],
+          "reviewStatus": "draft",
+          "enabledForPilot": false,
+          "approvalScope": "pending_review"
+        },
+        {
+          "id": "buyer-playbook-17",
+          "name": "Units",
+          "rule": "Use numeral with spelled-out unit when room allows (66 kilogram); compact units without spaces (66kg, 66m, 66pcs, 66ml, 66L) when constrained. Decimals rather than fractions for precision; no dot after metric symbols.",
+          "sourceDocuments": [
+            "5.4.5. General Formats/Unit of measurements.pdf"
+          ],
+          "reviewStatus": "draft",
+          "enabledForPilot": false,
+          "approvalScope": "pending_review"
+        },
+        {
+          "id": "buyer-playbook-18",
+          "name": "Numbers",
+          "rule": "Use numerals, cardinal numbers in dates, and % symbol (66% not 66 percent).",
+          "sourceDocuments": [
+            "5.5. Numbers.pdf"
+          ],
+          "reviewStatus": "draft",
+          "enabledForPilot": false,
+          "approvalScope": "pending_review"
+        },
+        {
+          "id": "buyer-playbook-19",
+          "name": "Spelling",
+          "rule": "Use American English spelling when writing English, e.g. center, gray.",
+          "sourceDocuments": [
+            "5.6. Spelling.pdf"
+          ],
+          "reviewStatus": "draft",
+          "enabledForPilot": false,
+          "approvalScope": "pending_review"
+        },
+        {
+          "id": "buyer-playbook-20",
+          "name": "Text styling",
+          "rule": "Use bold, italics and capitalization conservatively; emphasize helpful words or phrases, not whole blocks.",
+          "sourceDocuments": [
             "5.7. Text Styling.pdf"
           ],
           "reviewStatus": "draft",
-          "enabledForPilot": false
+          "enabledForPilot": false,
+          "approvalScope": "pending_review"
+        },
+        {
+          "id": "buyer-playbook-21",
+          "name": "Emoji placement",
+          "rule": "Place emoji at end of title or body copy. Standard notification format: title = summary/hook; body = description + CTA + emoji. Evaluate individual copy components, not whole page text.",
+          "sourceDocuments": [
+            "Emoji.pdf"
+          ],
+          "reviewStatus": "draft",
+          "enabledForPilot": false,
+          "approvalScope": "pending_review"
+        },
+        {
+          "id": "buyer-playbook-22",
+          "name": "Emoji quantity and frequency",
+          "rule": "Usually use one emoji, unless multiple genuinely suit the message; omit emoji approximately half the time to preserve impact.",
+          "sourceDocuments": [
+            "Emoji.pdf"
+          ],
+          "reviewStatus": "draft",
+          "enabledForPilot": false,
+          "approvalScope": "pending_review"
+        },
+        {
+          "id": "buyer-playbook-23",
+          "name": "Emoji selection",
+          "rule": "Use the recommended Emoji Set as brand-compatible suggestions, not as a requirement to insert emoji.",
+          "sourceDocuments": [
+            "Emoji Set.pdf"
+          ],
+          "reviewStatus": "draft",
+          "enabledForPilot": false,
+          "approvalScope": "pending_review"
+        },
+        {
+          "id": "buyer-playbook-24",
+          "name": "Push notifications",
+          "rule": "Historical guidance: titles 15–30 characters; bodies preferably at most 110 characters; Android may visually truncate sooner. Verify against current platforms before enforcing.",
+          "sourceDocuments": [
+            "5.9.1. Limitations/Push Notifications.pdf"
+          ],
+          "reviewStatus": "draft",
+          "enabledForPilot": false,
+          "approvalScope": "pending_review"
+        },
+        {
+          "id": "buyer-playbook-25",
+          "name": "SMS and release notes",
+          "rule": "Historical guidance: SMS 135 characters, Apple release notes 4000, Google Play release notes 500; verify current limits.",
+          "sourceDocuments": [
+            "5.9.2. Limitations/SMS Notifications & Release Notes.pdf"
+          ],
+          "reviewStatus": "draft",
+          "enabledForPilot": false,
+          "approvalScope": "pending_review"
         }
       ],
       "glossary": [
@@ -178,15 +347,115 @@
         "5.4.2. General Formats/Currency.pdf",
         "5.4.3. General Formats/Date.pdf",
         "5.4.4. General Formats/Time.pdf",
+        "5.4.5. General Formats/Phone Number.pdf",
+        "5.4.5. General Formats/Unit of measurements.pdf",
         "5.5. Numbers.pdf",
-        "5.7. Text Styling.pdf"
+        "5.6. Spelling.pdf",
+        "5.7. Text Styling.pdf",
+        "Emoji.pdf",
+        "Emoji Set.pdf",
+        "5.9.1. Limitations/Push Notifications.pdf",
+        "5.9.2. Limitations/SMS Notifications & Release Notes.pdf",
+        "1.1. Our Identity.pdf",
+        "1.2. Our Goals.pdf",
+        "1.3. Our Philosophy.pdf",
+        "3.1. Target Audience (Primary & Secondary).pdf",
+        "5.1. Social Norms.pdf",
+        "5.2. Loss Aversion.pdf",
+        "5.3. Anchoring.pdf",
+        "5.4. Scarcity.pdf",
+        "5.5. Personalization.pdf",
+        "5.6. Prominence.pdf",
+        "5.7. Trust.pdf",
+        "5.8. Curiosity.pdf",
+        "5.9. Benefits.pdf",
+        "5.10. Ease.pdf"
       ],
       "openQuestions": [
         "Which legacy Playbook rules still match current Buyer design system and product tone?",
         "Is button Title Case still required in current Buyer components?",
         "Which older audience assumptions and communication promises are outdated?",
         "Who approves Buyer-domain guidelines and exceptions?"
-      ]
+      ],
+      "emoji": {
+        "placement": "At end of title/body copy",
+        "quantity": "One generally; more only when justified",
+        "frequency": "Omit approximately half the time",
+        "notificationFormat": {
+          "title": "Summary/Hook",
+          "body": "Description + CTA + emoji"
+        },
+        "sourceDocuments": [
+          "Emoji.pdf",
+          "Emoji Set.pdf"
+        ]
+      },
+      "writingAngles": [
+        {
+          "name": "Social Norms",
+          "sourceDocument": "5.1. Social Norms.pdf",
+          "status": "optional_historical_angle",
+          "caution": "Do not fabricate factual claims"
+        },
+        {
+          "name": "Loss Aversion",
+          "sourceDocument": "5.2. Loss Aversion.pdf",
+          "status": "optional_historical_angle",
+          "caution": "Do not fabricate factual claims"
+        },
+        {
+          "name": "Anchoring",
+          "sourceDocument": "5.3. Anchoring.pdf",
+          "status": "optional_historical_angle",
+          "caution": "Do not fabricate factual claims"
+        },
+        {
+          "name": "Scarcity",
+          "sourceDocument": "5.4. Scarcity.pdf",
+          "status": "optional_historical_angle",
+          "caution": "Do not fabricate factual claims"
+        },
+        {
+          "name": "Personalization",
+          "sourceDocument": "5.5. Personalization.pdf",
+          "status": "optional_historical_angle",
+          "caution": "Do not fabricate factual claims"
+        },
+        {
+          "name": "Prominence",
+          "sourceDocument": "5.6. Prominence.pdf",
+          "status": "optional_historical_angle",
+          "caution": "Do not fabricate factual claims"
+        },
+        {
+          "name": "Trust",
+          "sourceDocument": "5.7. Trust.pdf",
+          "status": "optional_historical_angle",
+          "caution": "Do not fabricate factual claims"
+        },
+        {
+          "name": "Curiosity",
+          "sourceDocument": "5.8. Curiosity.pdf",
+          "status": "optional_historical_angle",
+          "caution": "Do not fabricate factual claims"
+        },
+        {
+          "name": "Benefits",
+          "sourceDocument": "5.9. Benefits.pdf",
+          "status": "optional_historical_angle",
+          "caution": "Do not fabricate factual claims"
+        },
+        {
+          "name": "Ease",
+          "sourceDocument": "5.10. Ease.pdf",
+          "status": "optional_historical_angle",
+          "caution": "Do not fabricate factual claims"
+        }
+      ],
+      "brandAndAudienceBackground": {
+        "status": "historical_reference_only",
+        "caution": "Brand promises, persona assumptions, delivery fee/speed are not current facts without verification."
+      }
     }
   }
 }
