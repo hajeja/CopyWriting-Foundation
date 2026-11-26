@@ -12,7 +12,7 @@
     "principles": [
       {
         "id": "global-principle-01",
-        "rule": "Make it easy to understand."
+        "rule": "Write clear, naturally connected sentences. Make references and the relationship between information, conditions, purposes, and actions easy to follow. Use connectors such as 'untuk', 'jika', or 'agar' only when they clarify meaning; avoid fragmented, ambiguous, or unnecessarily passive wording."
       },
       {
         "id": "global-principle-02",
@@ -36,7 +36,7 @@
       },
       {
         "id": "global-principle-07",
-        "rule": "Keep it short without losing important context."
+        "rule": "Be concise and direct without losing necessary meaning. Remove filler, redundant politeness, repetition, and wordy constructions (for example unnecessary 'mohon', 'harap', or 'perlu diketahui bahwa'). Prefer straightforward actions and natural wording. Keep extra detail when needed for risks, conditions, consequences, or complex decisions; do not shorten at the cost of clarity or respect."
       },
       {
         "id": "global-principle-08",
@@ -105,7 +105,9 @@
       "A pattern is a guide, not mandatory sentence structure.",
       "Keep meaningful, familiar industry terms; do not blindly translate or expand acronyms.",
       "Don't automatically turn paragraphs into checklists when current content is already easy to scan.",
-      "Do not display raw markup tags (e.g. <strong>) as copy. Markup sanitization belongs in plugin code."
+      "Do not display raw markup tags (e.g. <strong>) as copy. Markup sanitization belongs in plugin code.",
+      "Evaluate sentence-level clarity and coherence even when grammar is correct: check whether references are clear and the logical link from purpose or condition to user action is understandable. Suggest a rewrite only when it meaningfully improves comprehension or actionability; do not insert connectors mechanically.",
+      "Evaluate conciseness and directness: remove unnecessary politeness, filler, repetition, and verbose phrasing, but preserve essential business meaning and context. Keep short UI copy short; allow longer copy when the task, risks, or consequences need explanation. Do not manufacture findings for acceptable copy."
     ]
   },
   "domains": {
