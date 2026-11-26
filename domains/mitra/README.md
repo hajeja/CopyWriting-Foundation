@@ -1,36 +1,36 @@
-# Mitra Copy Guidelines — v0.1 Research Draft
+# Mitra Copy Guidelines
 
-**Status:** Research-derived working hypotheses. **Not approved, not enabled in tools.**
+**Current trial config:** [v0.1.1 — Approved for Pilot](./mitra-guidelines-v0.1.1-pilot-approved.json) · **9 enabled guidelines**.
 
-[Mitra Guidelines JSON](./mitra-guidelines-v0.1-draft.json)
+**Original source snapshot:** [v0.1.0 — Research Draft](./mitra-guidelines-v0.1-draft.json) (preserved unchanged).
 
-## Background
+## Approval scope and source
 
-Based on earlier Mitra/Fulfillment field-user discussion (Aug–Nov 2026), especially:
+On **26 November 2026**, the project owner requested Mitra guidelines be marked `approved` and `enabledForPilot` **for internal hands-on testing**. This is **not** formal Ops/BPI approval and does **not** independently validate field-user research hypotheses.
+
+Derived from earlier Mitra/Fulfillment field-user discussions about:
 - Direct, contextual, task-focused instructions
-- Clear object, action and expected result
-- Error reason and recovery when actually known
-- Avoid unfamiliar English and internal terms
-- Reduce unnecessary reliance on SPV clarification
-- Copy that also supports SOP, Working Instruction (WI), OJT and operational announcements
+- Clear object, required action, and next step
+- Error reasons and recovery where confirmed
+- Avoiding unfamiliar internal English/system jargon
+- Reducing unnecessary SPV clarifications
+- Copy in UI, SOP, Working Instructions, OJT and operational communications
 
-The Playbook's `2.4. Our Tone.pdf` distinguishes **Fulfillment** from Buyer: operational copy trends more serious, straightforward and simple. This is a **provisional reference**, not a formally approved Mitra-specific voice & tone policy.
+The uploaded Astro Playbook's `2.4. Our Tone.pdf` differentiates Fulfillment from Buyer. The serious / straightforward / simple tone is a provisional reference, **not a signed-off Mitra voice guide**.
 
-## What is here
+## Pilot guidelines
 
-9 proposed guidelines. All are `reviewStatus: draft`, `enabledForPilot: false`. They are **observations / candidate practices**, not final product rules.
+Nine candidate rules now enabled for pilot testing. `glossaryCandidates` remain **unconfirmed terminology references**; do not enforce them as official glossary.
 
-There is **no approved Mitra glossary yet**. `glossaryCandidates` lists terms that need validation; they are not mandatory terminology mappings.
+### Safety and business constraints
 
-## Safety and quality guardrails
+- Never invent operational steps, scan quantities, statuses, SLA, permissions, recovery, escalation or ownership.
+- Identify the exact user role and workflow; Mitra is not always equivalent to all Fulfillment or WMS users.
+- Do not import Supplier-specific terminology restrictions or Buyer style rules.
+- User approval to pilot does not approve business facts.
 
-- Never invent operational steps, SLA, statuses, scan quantities, recovery actions, escalation rules, or work ownership.
-- Do not assume Mitra = every Fulfillment or WMS user; identify relevant role and workflow.
-- Do not import Supplier terminology obligations into Mitra.
-- Preserve real SOP/WI/OJT requirements and flag missing facts for follow-up.
+## Integration
 
-## Next review
+The `v0.1.1` file has `reviewStatus: approved`, `enabledForPilot: true`, `approvalScope: pilot_only`. Plugin/extension runtimes must explicitly load it; GitHub files do not sync themselves.
 
-Validate scope, current examples, audience terminology, actual operational rules, glossary, and approval owners with relevant Design/Ops partners.
-
-Not yet wired into Figma/Chrome runtime. Use the existing shared Global Foundation separately when piloting.
+Future work: Validate actual UI/SOP/OJT samples with Operations, Design and researchers; establish a proper Mitra glossary and approval owner.
