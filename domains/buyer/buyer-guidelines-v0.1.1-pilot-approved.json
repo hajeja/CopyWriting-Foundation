@@ -1,0 +1,216 @@
+{
+  "schemaVersion": "1.0",
+  "config": {
+    "name": "Astro Buyer Copy Guidelines",
+    "version": "0.1.1-pilot-approved",
+    "status": "approved_for_pilot_by_project_owner_not_formally_signed_off",
+    "source": "UX Writing Playbook (1).zip, files listed in domains.buyer.sourceDocuments",
+    "note": "This is a pilot-enabled copy of the original draft. Source provenance and unresolved validation remain in the domain metadata. Approval does not verify operational/business facts. Preserve original draft unchanged.",
+    "sourceVersion": "0.1.0-extracted-draft",
+    "approvalScope": "Internal trial only; user-authorized 2026-11-26. Does not constitute BPI, Brand, Ops, Legal, or organizational policy signoff."
+  },
+  "sharedGlobalFoundation": {
+    "reference": "../supplier/astro-copy-config-v0.3.1-supplier-terminology.json#global",
+    "note": "Reference the existing global baseline; buyer-only guidelines are below. Do not copy or enforce Supplier-specific guidelines or glossary."
+  },
+  "domains": {
+    "buyer": {
+      "label": "Buyer",
+      "audience": "Buyers using Astro consumer products. Check actual product, journey stage, and audience before applying copy rules.",
+      "status": "approved_for_pilot_validation_pending",
+      "reviewPolicy": {
+        "activeWhen": "enabledForPilot = true AND reviewStatus = approved",
+        "drafts": "Historical v0.1.0 draft remains archived; this v0.1.1 file enables test usage, with content subject to review.",
+        "nonFabrication": "Do not invent benefits, promo terms, delivery promises, urgency, eligibility, stock claims, or payment consequences.",
+        "scope": "Buyer product UX. Do not automatically apply Buyer capitalization, voice, or marketing tone to Supplier, Mitra, or Admin.",
+        "pilotApproval": "All domain guidelines activated for user-led internal trial on 2026-11-26. Formal policy signoff is not established.",
+        "scopeNotes": "Guidelines are stylistic/research-derived pilot heuristics; do not treat them as evidence of business behavior."
+      },
+      "toneReference": {
+        "source": "2.4. Our Tone.pdf; 2.5. Our Tone_ User Journey Map.pdf; 2.6. Writing with Voice & Tone.pdf",
+        "buyerBaseline": "More casual, fun, enthusiastic and simple than operational product tones; adjust to specific situation.",
+        "journeyNuance": "First impressions, onboarding, promo news and payment success may lean more exciting; payment details, confirmation and errors should lean toward respectful reassurance.",
+        "caution": "Tone is context-dependent; payment and errors should never sacrifice clarity or sensitivity for playfulness.",
+        "reviewStatus": "needs_validation"
+      },
+      "guidelines": [
+        {
+          "id": "buyer-guideline-01",
+          "name": "Use a friendly, thoughtful and reliable voice.",
+          "rule": "Use natural, relatable language while staying helpful, considerate, and clear. Avoid jokes or overly casual expressions in sensitive or confusing moments.",
+          "sourceDocuments": [
+            "2.3. Our Voice.pdf",
+            "2.3.1. Friendly.pdf",
+            "2.3.2. Thoughtful.pdf",
+            "2.3.3. Reliable.pdf",
+            "2.6. Writing with Voice & Tone.pdf"
+          ],
+          "reviewStatus": "approved",
+          "enabledForPilot": true,
+          "approvalScope": "pilot_only",
+          "approvalSource": "User requested internal testing on 2026-11-26"
+        },
+        {
+          "id": "buyer-guideline-02",
+          "name": "Match tone to the user's journey.",
+          "rule": "Use an engaging tone where appropriate, while prioritizing respect and reassurance during payment-related uncertainty and errors.",
+          "sourceDocuments": [
+            "2.4. Our Tone.pdf",
+            "2.5. Our Tone_ User Journey Map.pdf"
+          ],
+          "reviewStatus": "approved",
+          "enabledForPilot": true,
+          "approvalScope": "pilot_only",
+          "approvalSource": "User requested internal testing on 2026-11-26"
+        },
+        {
+          "id": "buyer-guideline-03",
+          "name": "Lead with what matters to the buyer.",
+          "rule": "Prioritize what users need to understand and the benefit relevant to them, rather than internal company objectives. Do not invent benefits.",
+          "sourceDocuments": [
+            "4.1. Context is king.pdf",
+            "4.4. Empathy first.pdf"
+          ],
+          "reviewStatus": "approved",
+          "enabledForPilot": true,
+          "approvalScope": "pilot_only",
+          "approvalSource": "User requested internal testing on 2026-11-26"
+        },
+        {
+          "id": "buyer-guideline-04",
+          "name": "Make content easy to scan.",
+          "rule": "Use descriptive headings, logical information grouping, and short paragraphs; use bullet points only when they help.",
+          "sourceDocuments": [
+            "4.3. Mind the hierarchy.pdf"
+          ],
+          "reviewStatus": "approved",
+          "enabledForPilot": true,
+          "approvalScope": "pilot_only",
+          "approvalSource": "User requested internal testing on 2026-11-26"
+        },
+        {
+          "id": "buyer-guideline-05",
+          "name": "Keep copy plain and concise.",
+          "rule": "Use familiar words, active voice, and short natural sentences. Remove unnecessary words without losing material information.",
+          "sourceDocuments": [
+            "4.2. Write like a human.pdf",
+            "4.5. Pay attention to detail.pdf",
+            "2.3.3. Reliable.pdf"
+          ],
+          "reviewStatus": "approved",
+          "enabledForPilot": true,
+          "approvalScope": "pilot_only",
+          "approvalSource": "User requested internal testing on 2026-11-26"
+        },
+        {
+          "id": "buyer-guideline-06",
+          "name": "Use familiar acronyms carefully.",
+          "rule": "Avoid unexplained industry jargon; spell out unfamiliar acronyms on first use when helpful. Keep widely recognized acronyms or official entity names as needed.",
+          "sourceDocuments": [
+            "5.1. Abbreviations.pdf",
+            "5.2. Acronyms.pdf"
+          ],
+          "reviewStatus": "approved",
+          "enabledForPilot": true,
+          "approvalScope": "pilot_only",
+          "approvalSource": "User requested internal testing on 2026-11-26"
+        },
+        {
+          "id": "buyer-guideline-07",
+          "name": "Apply Buyer capitalization appropriately.",
+          "rule": "Playbook guidance: sentence case for headings/body and title case for buttons and section labels; preserve proper names. Validate against current Buyer Design System before enforcing.",
+          "sourceDocuments": [
+            "5.3. Capitalization.pdf"
+          ],
+          "reviewStatus": "approved",
+          "enabledForPilot": true,
+          "approvalScope": "pilot_only",
+          "approvalSource": "User requested internal testing on 2026-11-26"
+        },
+        {
+          "id": "buyer-guideline-08",
+          "name": "Keep brand naming consistent.",
+          "rule": "Use 'Astro' in product UX writing; the stylized ASTRO logo is a separate brand asset.",
+          "sourceDocuments": [
+            "5.4.1. General Formats/Brand Name.pdf"
+          ],
+          "reviewStatus": "approved",
+          "enabledForPilot": true,
+          "approvalScope": "pilot_only",
+          "approvalSource": "User requested internal testing on 2026-11-26"
+        },
+        {
+          "id": "buyer-guideline-09",
+          "name": "Use consistent number, currency, date and time formats.",
+          "rule": "Playbook examples include numerals, %, 'Rp50.000', 24-hour times with WIB when relevant, date names in Indonesian/English context, and no-space en dashes for ranges. Do not change actual values.",
+          "sourceDocuments": [
+            "5.5. Numbers.pdf",
+            "5.4.2. General Formats/Currency.pdf",
+            "5.4.3. General Formats/Date.pdf",
+            "5.4.4. General Formats/Time.pdf"
+          ],
+          "reviewStatus": "approved",
+          "enabledForPilot": true,
+          "approvalScope": "pilot_only",
+          "approvalSource": "User requested internal testing on 2026-11-26"
+        },
+        {
+          "id": "buyer-guideline-10",
+          "name": "Use emphasis and punctuation purposefully.",
+          "rule": "Avoid overly emphatic punctuation, excessive emoji, all caps, and gratuitous bold. Emphasize the most helpful information.",
+          "sourceDocuments": [
+            "2.6. Writing with Voice & Tone.pdf",
+            "5.7. Text Styling.pdf"
+          ],
+          "reviewStatus": "approved",
+          "enabledForPilot": true,
+          "approvalScope": "pilot_only",
+          "approvalSource": "User requested internal testing on 2026-11-26"
+        }
+      ],
+      "glossary": [
+        {
+          "term": "Astro",
+          "preferredUsage": "Use 'Astro' in UX copy; logo styling may differ.",
+          "reviewStatus": "draft_extracted",
+          "sourceDocument": "5.4.1. General Formats/Brand Name.pdf"
+        },
+        {
+          "term": "Astro Koin",
+          "preferredUsage": "Preserve proper product naming when relevant; verify current naming.",
+          "reviewStatus": "needs_validation",
+          "sourceDocument": "5.3. Capitalization.pdf"
+        }
+      ],
+      "sourceDocuments": [
+        "2.3. Our Voice.pdf",
+        "2.3.1. Friendly.pdf",
+        "2.3.2. Thoughtful.pdf",
+        "2.3.3. Reliable.pdf",
+        "2.4. Our Tone.pdf",
+        "2.5. Our Tone_ User Journey Map.pdf",
+        "2.6. Writing with Voice & Tone.pdf",
+        "4.1. Context is king.pdf",
+        "4.2. Write like a human.pdf",
+        "4.3. Mind the hierarchy.pdf",
+        "4.4. Empathy first.pdf",
+        "4.5. Pay attention to detail.pdf",
+        "5.1. Abbreviations.pdf",
+        "5.2. Acronyms.pdf",
+        "5.3. Capitalization.pdf",
+        "5.4.1. General Formats/Brand Name.pdf",
+        "5.4.2. General Formats/Currency.pdf",
+        "5.4.3. General Formats/Date.pdf",
+        "5.4.4. General Formats/Time.pdf",
+        "5.5. Numbers.pdf",
+        "5.7. Text Styling.pdf"
+      ],
+      "openQuestions": [
+        "Which legacy Playbook rules still match current Buyer design system and product tone?",
+        "Is button Title Case still required in current Buyer components?",
+        "Which older audience assumptions and communication promises are outdated?",
+        "Who approves Buyer-domain guidelines and exceptions?"
+      ]
+    }
+  }
+}
