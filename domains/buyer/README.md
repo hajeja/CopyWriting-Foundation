@@ -1,34 +1,12 @@
-# Buyer Copy Guidelines
+# Buyer Writing Rules — UX Writing Playbook
 
-**Current trial config:** [v0.1.1 — Approved for Pilot](./buyer-guidelines-v0.1.1-pilot-approved.json) · **10 enabled guidelines**.
+Entire Buyer domain rewritten from user-uploaded **UX Writing Playbook (1)(1).zip** (52 PDF files), 2026-11-26, replacing the previous 10-rule summary. Includes voice and tone, journey tone, writing principles, formatting (abbreviations, acronyms, capitalization, brand, currency, dates, time, phone numbers, measurements, numbers, spelling and emphasis), emojis, and notification/release-note limitations.
 
-**Original source snapshot:** [v0.1.0 — Extracted Draft](./buyer-guidelines-v0.1-draft.json) (preserved unchanged).
+- [Buyer pilot guidelines](./buyer-guidelines-v0.1.1-pilot-approved.json) — retains the previously authorized internal pilot status, not formal brand approval.
+- [Buyer draft guidelines](./buyer-guidelines-v0.1-draft.json) — same source rules, disabled pending approval.
 
-## Approval scope and source
+## Emoji
+From `Emoji.pdf`: place emoji at the **end of title/body copy**, usually **one emoji**, omit it roughly half the time; follow title = hook, body = description + CTA + emoji. `Emoji Set.pdf` lists recommended examples.
 
-On **26 November 2026**, the project owner requested Buyer guidelines be marked `approved` and `enabledForPilot` **for internal hands-on testing**. This is **not** a claim of formal BPI, Brand, or organizational policy approval.
-
-Guidelines come from the uploaded **UX Writing Playbook (1).zip**. Relevant files include:
-- `2.3. Our Voice.pdf` and Friendly / Thoughtful / Reliable voice docs
-- `2.4. Our Tone.pdf`, `2.5. Our Tone_ User Journey Map.pdf`, `2.6. Writing with Voice & Tone.pdf`
-- `4.1–4.5` Writing Principles
-- `5.1` Abbreviations, `5.2` Acronyms, `5.3` Capitalization; brand/currency/date/time formats and numbers
-
-Source ZIP is not committed to the repository. The JSON includes source filename references.
-
-## Pilot guidelines
-
-Ten rules cover Buyer voice, tone by journey, user benefit, scanability, concise language, acronyms, capitalization, brand naming, date/time/currency and emphasis.
-
-Historical playbook tone for Buyer is more casual, fun, enthusiastic and simple. Error/payment and sensitive moments should favor respect and reassurance.
-
-**Known validation:** Playbook calls for Title Case on buttons and sentence case on headings/body. Confirm this still matches current Buyer DS before treating it as permanent policy.
-
-## Integration
-
-- Apply shared global principles and **Buyer-specific** rules only; never import Supplier-specific glossary or naming mandates.
-- Domain rules in the `v0.1.1` file have `reviewStatus: approved`, `enabledForPilot: true`, and `approvalScope: pilot_only`.
-- This GitHub update does not auto-update the Chrome Extension or Figma Plugin: the runtime must explicitly load the correct version.
-- Do not invent commercial or payment terms, discount eligibility, delivery promises or product claims. Flag missing material context.
-
-Future work: Validate against active Buyer UX, update outdated style rules, and seek proper policy signoff where needed.
+## Guardrails
+Use the shared Global Copy Foundation, but do not apply Supplier/Mitra-specific guidance to Buyer. Historical identity, goals, audience, delivery/pricing claims and behavioral techniques are reference only; verify live product facts. The old playbook's Title Case buttons and character limits also need verification against current interfaces/platforms. Each JSON rule cites its source PDF filename; the ZIP itself is not committed here.
